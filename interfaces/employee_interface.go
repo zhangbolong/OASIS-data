@@ -12,5 +12,7 @@ type EmployeeInterface interface {
 	BatchGet(ids []string) ([]*hr.Employee, error)
 	Create(employee *hr.Employee) error
 	Update(employee *hr.Employee) error
+	// UpdateEmployeeHierarchy atomicly updates multiple employee records for hierarchy changes
+	UpdateEmployeeHierarchy(employees []*hr.Employee) error
 	Delete(id string) error
 }

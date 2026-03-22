@@ -4,6 +4,13 @@ package hr
 type Department struct {
 	ID          string
 	Name        string
-	ParentID    string // Optional: for hierarchy
-	Description string // Optional description
+	ParentID    string   // Optional: for hierarchy
+	ChildIDs    []string // Downward links for hierarchy
+	Description string   // Optional description
+}
+
+// DepartmentBrief represents a summarized view of a Department.
+type DepartmentBrief struct {
+	ID   string
+	Name string
 }

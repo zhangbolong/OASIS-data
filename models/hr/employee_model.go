@@ -17,3 +17,15 @@ type Employee struct {
 	ManagerID     string   // Employee.ID of direct reporting manager, empty if top-level
 	DirectReports []string // Optional: list of Employee.IDs who report directly
 }
+
+// EmployeeBrief represents a summarized view of an Employee for list/overview APIs.
+type EmployeeBrief struct {
+	ID           string
+	FirstName    string
+	LastName     string
+	Role         string
+	Level        int
+	DepartmentID string
+	ManagerID    string
+	Status       string
+}

@@ -42,8 +42,13 @@ func (a *SqliteEmployeeAdapter) Create(employee *hr.Employee) error {
 	return nil
 }
 
-// Update modifies an existing Employee.
 func (a *SqliteEmployeeAdapter) Update(employee *hr.Employee) error {
+	// TODO: Implement SQLite logic
+	return nil
+}
+
+// UpdateEmployeeHierarchy atomicly updates multiple employee records for hierarchy changes
+func (a *SqliteEmployeeAdapter) UpdateEmployeeHierarchy(employees []*hr.Employee) error {
 	// TODO: Implement SQLite logic
 	return nil
 }

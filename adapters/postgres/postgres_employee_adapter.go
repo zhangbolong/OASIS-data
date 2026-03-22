@@ -42,8 +42,13 @@ func (a *PostgresEmployeeAdapter) Create(employee *hr.Employee) error {
 	return nil
 }
 
-// Update modifies an existing Employee.
 func (a *PostgresEmployeeAdapter) Update(employee *hr.Employee) error {
+	// TODO: Implement PostgreSQL logic
+	return nil
+}
+
+// UpdateEmployeeHierarchy atomicly updates multiple employee records for hierarchy changes
+func (a *PostgresEmployeeAdapter) UpdateEmployeeHierarchy(employees []*hr.Employee) error {
 	// TODO: Implement PostgreSQL logic
 	return nil
 }

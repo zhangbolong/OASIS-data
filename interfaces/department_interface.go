@@ -12,5 +12,7 @@ type DepartmentInterface interface {
 	BatchGet(ids []string) ([]*hr.Department, error)
 	Create(department *hr.Department) error
 	Update(department *hr.Department) error
+	// UpdateDepartmentHierarchy atomicly updates multiple department records for hierarchy changes
+	UpdateDepartmentHierarchy(departments []*hr.Department) error
 	Delete(id string) error
 }

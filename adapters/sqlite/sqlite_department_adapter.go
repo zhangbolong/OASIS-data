@@ -42,8 +42,13 @@ func (a *SqliteDepartmentAdapter) Create(department *hr.Department) error {
 	return nil
 }
 
-// Update modifies an existing Department.
 func (a *SqliteDepartmentAdapter) Update(department *hr.Department) error {
+	// TODO: Implement SQLite logic
+	return nil
+}
+
+// UpdateDepartmentHierarchy atomicly updates multiple department records for hierarchy changes
+func (a *SqliteDepartmentAdapter) UpdateDepartmentHierarchy(departments []*hr.Department) error {
 	// TODO: Implement SQLite logic
 	return nil
 }

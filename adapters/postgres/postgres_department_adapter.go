@@ -42,8 +42,13 @@ func (a *PostgresDepartmentAdapter) Create(department *hr.Department) error {
 	return nil
 }
 
-// Update modifies an existing Department.
 func (a *PostgresDepartmentAdapter) Update(department *hr.Department) error {
+	// TODO: Implement PostgreSQL logic
+	return nil
+}
+
+// UpdateDepartmentHierarchy atomicly updates multiple department records for hierarchy changes
+func (a *PostgresDepartmentAdapter) UpdateDepartmentHierarchy(departments []*hr.Department) error {
 	// TODO: Implement PostgreSQL logic
 	return nil
 }
